@@ -80,6 +80,15 @@ inner-column {
   margin-left: auto;
 }
 
+.inner-column {
+  display:block;
+  padding:10px;
+  /**/
+  width: 98%;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+}
 /* Typography */
 .loud-voice {
   font-family: sans-serif;
@@ -120,18 +129,31 @@ inner-column {
   color: white;
   font-size: 1.2rem;
   padding: 10px 20px;
-
+  border-radius: 10px;
 }
 
 /* Modules */
-product-grid {
+
+products-grid {
   display: block;
+}
+
+products-grid .product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(166px, 1fr));
+  grid-gap: 1em;
+  list-style-type: none;
+}
+
+products-grid img {
+  border-radius: 10px;
 }
 
 graphic-diptych {
   display: flex;
   gap: 20px;
   flex-direction: column;
+  padding: 0 0 60px 0;
 }
 
 graphic-diptych picture {
@@ -175,3 +197,45 @@ graphic-diptych text-content .button {
   color: var(--white);
 }
 
+.centre {
+text-align: center;"
+}
+
+.quote {
+  background-color: var(--light);
+}
+
+.quote blockquote {
+  font-size: 36px;
+  font-style: italic;
+}
+
+.quote p {
+  text-align: right;
+}
+
+call-to-action {
+  display: flex;
+  background-color: var(--color);
+  color: white;
+  gap: 20px;
+  padding: 20px 48px;
+  margin: 60px;
+  justify-content: space-around;
+  border-radius: 25px;
+}
+
+right-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cta-button {
+  background-color: var(--color);
+  color: white;
+  padding: 5px;
+  border: 1px solid #efefef;
+  text-align: center;
+  border-radius: 10px;
+}
